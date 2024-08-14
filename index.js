@@ -6,16 +6,16 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://swethashree:swethashree@travel.k9l4w.mongodb.net/?retryWrites=true&w=majority&appName=travel", {
+mongoose.connect("mongodb+srv://swethashree:swethashree@travel.k9l4w.mongodb.net/travel", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
 .then(() => {
     console.log("Connected to database");
 })
-.catch((error) => {
-    console.error("Database connection error:", error);
-});
+// .catch((error) => {
+//     console.error("Database connection error:", error);
+// });
 
 app.use("/user", userRoutes);
 
