@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
 
 const app = express();
-
+const cors=require("cors");
+app.use(cors());
 app.use(express.json());
 
 mongoose.connect("mongodb+srv://swethashree:swethashree@travel.k9l4w.mongodb.net/travel", {
